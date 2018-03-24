@@ -6,8 +6,8 @@
 2. [Stored XSS in WordPress comments](#two)
 3. [Open Redirect Vulnerability in login URL](#three)
 
-### 1. Reflected XSS in URL for Wordpress TwentyFifteen theme
 <a name="one"></a>
+### 1. Reflected XSS in URL for Wordpress TwentyFifteen theme
 
 #### Steps to replicate:
 - Install WordPress version 4.2 and make sure that the theme is set to TwentyFifteen which, by default, uses an icon font package called "Genericons".
@@ -69,8 +69,8 @@ From example.html:
 **Affected Versions:**
 This vulnerability affects versions of Genericons prior to 3.3.1, which is used by default in WordPress versions prior to 4.2.2.
 
-### 2. Stored XSS in WordPress comments
 <a name="two"></a>
+### 2. Stored XSS in WordPress comments
 
 #### Steps to replicate:
 - Install WordPress version 4.0.
@@ -91,8 +91,8 @@ The specific code that allows this vulnerability is found in /src/wp-comments-po
 **Affected Versions:**
 This vulnerability affects versions of WordPress core prior to 4.2.1. I tested it on version 4.0.
 
-### 3. Open Redirect Vulnerability in login URL
 <a name="three"></a>
+### 3. Open Redirect Vulnerability in login URL
 
 #### Steps to replicate:
 - Install WordPress version 4.2.4.
