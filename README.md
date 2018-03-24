@@ -2,7 +2,7 @@
 
 ## WordPress Pentesting
 
-### 1. XSS in URL for Wordpress TwentyFifteen theme
+### 1. Reflected XSS in URL for Wordpress TwentyFifteen theme
 
 #### Steps to replicate:
 - Install WordPress version 4.2 and make sure that the theme is set to TwentyFifteen which, by default, uses an icon font package called "Genericons".
@@ -63,3 +63,24 @@ From example.html:
 ```
 **Affected Versions:**
 This vulnerability affects versions of Genericons prior to 3.3.1, which is used by default in WordPress versions prior to 4.2.2.
+
+### 2. Stored XSS in WordPress comments
+
+#### Steps to replicate:
+- Install WordPress version 4.0.
+- Create a new post, or go to any existing post.
+- Add a comment to the post, with the following body: ```<button onclick="alert('pwned')"></button>```
+
+Result:
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-23%20at%2010.30.38%20PM.png)
+
+#### Vulnerabilities:
+This is an example of a **stored XSS vulnerability**. The **CVE identifier** is `2015-3438`.
+
+#### Vulnerable source code
+
+The specific code that allows this vulnerability is found in /src/wp-comments-post.php, which handles WordPress comments. There is no validation to make sure the comment doesn't contain malicious HTML before adding it to the database.
+
+**Affected Versions:**
+This vulnerability affects versions of WordPress core prior to 4.2.1. I tested it on version 4.0.
+
