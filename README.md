@@ -21,7 +21,10 @@ I was able to get a response indicating that SQL injection is possible by replac
 
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.27.29%20PM.png)
 
-Vulnerability #2: __________________
+### Vulnerability #2: Session Hijacking/Fixation
+I logged into the Blue site in Google Chrome and then visited the session changer tool to get a valid session ID. Then I went to the Blue site in Firefox, but didn't log in. Instead I tried visiting `staff/index.php`, which wasn't accessible. I then went into Burp and got the attempt from my HTTP history, and sent it to Repeater, where I modified the session ID, then resent the request. I was then able to see the logged in staff page.
+
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%2010.33.13%20PM.png)
 
 
 ## Green
@@ -54,8 +57,11 @@ I was able to use the contact form to send malicious html as feedback. After sen
 ### Vulnerability #1: Insecure Direct Object Reference (IDOR)
 The 'Find a Salesperson' page has links for each salesperson. We can see in the url that each person is identified by an id number. By incrementing the ID, we can find salespeople who weren't included in the main site.
 
-The Blue and Green sites avoid this vulnerability by issuing a 302 Redirect on unlisted pages.
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.23.16%20PM.png)
+
+The Blue and Green sites avoid this vulnerability by issuing a 302 Redirect on unlisted pages:
+
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.19.41%20PM.png)
 
 ### Vulnerability #2: Cross-Site Request Forgery (CSRF)
 To exploit the CSRF vulnerability on the Red site, I uploaded a form to my github page at https://robeau.github.io/csrftwo/, then visited the site while logged in as pperson. It caused the first name of the user with id=1 to be changed, and redirected me to the user's page.
