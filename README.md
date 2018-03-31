@@ -69,6 +69,13 @@ To exploit the CSRF vulnerability on the Red site, I uploaded a form to my githu
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%2010.14.39%20PM.png)
 
 
+## Bonus Objective: XSS
+This time, instead of an alert, I sent javascript that sets the window location, redirecting the user to google.com.
+
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%2011.31.16%20PM.png)
+
+![](https://i.imgur.com/f5CkS96.gifv)
+
 ## Notes
 - **Which attacks were easiest to execute? Which were the most difficult?**
 The IDOR attack was definitely the easiest, both when finding the vulnerable page and executing the attack. Once I saw that the salespeople were listed by incrementing IDs, I was able to just try the next number until something interesting came up.
