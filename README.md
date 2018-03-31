@@ -17,7 +17,7 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 ## Blue
 
 ### Vulnerability #1: SQL Injection (SQLi)
-I was able to get a response indicating that SQL injection is possible by replacing the id parameter in the salesperson page with malicious SQL. After sending a GET request to `https://35.226.188.43/blue/public/salesperson.php?id=%27%20OR%201=1%20#%20`, I get result that says "Database query failed".
+I was able to get a response indicating that SQL injection is possible by replacing the id parameter in the salesperson page with malicious SQL. After sending a GET request to `https://35.226.188.43/blue/public/salesperson.php?id=%27%20OR%201=1%20#%20`, I received a result that says "Database query failed".
 
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.27.29%20PM.png)
 
