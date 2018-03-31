@@ -43,7 +43,10 @@ user exists
 
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%208.50.26%20PM.png)
 
-Vulnerability #2: __________________
+### Vulnerability #2: Cross-Site Scripting (XSS)
+I was able to use the contact form to send malicious html as feedback. After sending the form, log in and click feedback to see the javascript alert.
+
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.50.39%20PM.png)
 
 
 ## Red
