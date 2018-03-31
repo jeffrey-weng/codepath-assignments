@@ -70,5 +70,24 @@ To exploit the CSRF vulnerability on the Red site, I uploaded a form to my githu
 
 
 ## Notes
+- **Which attacks were easiest to execute? Which were the most difficult?**
+The IDOR attack was definitely the easiest, both when finding the vulnerable page and executing the attack. Once I saw that the salespeople were listed by incrementing IDs, I was able to just try the next number until something interesting came up.
+The most difficult was CSRF -- fortunately the assignment details were very descriptive.
 
-Describe any challenges encountered while doing the work
+- **What is a good rule of thumb which would prevent accidentally username enumeration vulnerabilities like the one created here?**
+Don't use incrementing numbers when assigning user IDs - instead use a unique uuid. Also, any page that you don't want public should be access restricted. Never trust the user to not try to visit pages, even if they're 'unlisted'.
+
+- **Since you should be somewhat familiar with the CMS and how it was coded, can you think of another resource which could be made vulnerable to an Insecure Direct Object Reference? What code could be removed which would expose it?**
+I guess the list of users could be vulnerable if they were publicly accessible the same way that `public/salesperson.php` is.
+
+- **Many SQL Injections use OR as part of the injected code. (For example: ' OR 1=1 --'.) Could AND work just as well in place of OR? (For example: ' AND 1=1 --'.) Why or why not?**
+The reason that OR is used is because it only requires one condition to be true, and we can guarantee a true condition with 1=1. You can only use AND if you know for sure that the first argument is true.
+
+- **A stored XSS attack requires patience because it could be stored for months before being triggered. Because of this, what important ingredient would an attacker most likely include in a stored XSS attack script?**
+It would be important that the payload be able to sit for a long time without being noticed, so one important ingredient might be to make sure that the attack is hidden well. Another one might be some type of alert to let the attacker know when the attack has been triggered, so they don't miss the window between the attack being triggered and being patched.
+
+- **Imagine that one of your classmates is an authorized admin for the site's CMS and you are not. How would you get them to visit the self-submitting, hidden form page you created in Objective #5 (CSRF)?**
+I could send them a link to my form, but tell them it's something else, like an article about cybersecurity or something. I could even edit the metadata on my page to make it show a nice thumbnail and headline in messenger/slack/etc so it looks legit.
+
+- **Compare session hijacking and session fixation. Which attack do you think is easier for an attacker to execute? Why? One of them is much easier to defend against than the other. Which one and why?**
+Session fixation seems much easier, because you don't need to find out the user's session ID, you just have to lure them into using yours. It also seems like the easiest to protect against, since you can simply make the session IDs expire.
