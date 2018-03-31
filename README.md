@@ -57,7 +57,10 @@ The 'Find a Salesperson' page has links for each salesperson. We can see in the 
 The Blue and Green sites avoid this vulnerability by issuing a 302 Redirect on unlisted pages.
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%209.23.16%20PM.png)
 
-Vulnerability #2: __________________
+### Vulnerability #2: Cross-Site Request Forgery (CSRF)
+To exploit the CSRF vulnerability on the Red site, I uploaded a form to my github page at https://robeau.github.io/csrftwo/, then visited the site while logged in as pperson. It caused the first name of the user with id=1 to be changed, and redirected me to the user's page.
+
+![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%2010.14.39%20PM.png)
 
 
 ## Notes
