@@ -74,7 +74,7 @@ This time, instead of an alert, I sent javascript that sets the window location,
 
 ![](https://github.com/robeau/codepath-assignments/blob/master/assets/Screen%20Shot%202018-03-30%20at%2011.31.16%20PM.png)
 
-![](https://i.imgur.com/f5CkS96.gifv)
+![](https://i.imgur.com/f5CkS96.gif)
 
 ## Notes
 - **Which attacks were easiest to execute? Which were the most difficult?**
