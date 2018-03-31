@@ -30,8 +30,8 @@ I logged into the Blue site in Google Chrome and then visited the session change
 ## Green
 
 ### Vulnerability #1: Username Enumeration
-Attempt to log in on all three sites, first using a username that doesn't exist, then using a known username (jmonroe99, provided in the assignment page).
-Notice that on the Blue and Red sites, the login failure messages are identical in both cases. On the Green site however, a non-existent username show the error in normal font, while existing usernames show the error in bold.
+I attempted to log in on all three sites, first using a username that doesn't exist, then using a known username (jmonroe99, provided in the assignment page).
+I noticed that on the Blue and Red sites, the login failure messages are identical in both cases. On the Green site however, a non-existent username show the error in normal font, while existing usernames show the error in bold.
 The mistake the developer made was using the wrong class name. For non-existent users, the class is 'failed', while for existing users it is 'failure'.
 
 non-existent user
