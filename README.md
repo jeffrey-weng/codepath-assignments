@@ -10,7 +10,7 @@ For this project, I deployed a Dionaea honeypot and a Snort honeypot. I was able
 I didn't encounter any issues when setting things up. The instructions were straightforward, and the scripts from MHN worked as expected.
 
 ## Data Collected
-See the (json export)[https://github.com/robeau/codepath-assignments/blob/master/session.json] for a copy of the raw data.
+See the [json export](https://github.com/robeau/codepath-assignments/blob/master/session.json) for a copy of the raw data.
 
 Between the two honeypots, I received 9,760 attacks (7703 on Dionaea and 2057 on Snort).
 The attacks came from 1,859 different IP addresses.
